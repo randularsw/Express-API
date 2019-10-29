@@ -48,7 +48,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 // patch post
-router.patch('/:id', async (req, res) => {
+router.patch('/:id', await (req, res) => {
     try{
         const patchedPost = await Post.updateOne(
             {_id: req.params.id},
